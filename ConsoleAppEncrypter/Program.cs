@@ -2,11 +2,20 @@
 
 namespace ConsoleAppEncrypter
 {
-    class Program
+    class TextEncripted
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            bool debug = true;
+
+            string newText = Encrypter.Encrypt("xyz");
+            Console.WriteLine("Text encripted: {0}", newText);
+            string TextDescripted = Encrypter.Decrypt(newText);
+            Console.WriteLine("Text Decripted: {0}", TextDescripted);
+
+            if (debug)
+                Console.ReadLine();
         }
     }
 }
+
